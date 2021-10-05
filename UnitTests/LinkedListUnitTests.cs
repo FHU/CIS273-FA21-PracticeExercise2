@@ -77,7 +77,6 @@ namespace UnitTests
         [TestMethod]
         public void TestLast()
         {
-
             IList<int> list = new LinkedList<int>();
 
             Assert.ThrowsException<NullReferenceException>(() =>

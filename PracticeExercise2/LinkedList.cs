@@ -130,7 +130,6 @@ namespace PracticeExercise2
                 else
                 {
                     Head = Head.Next;
-
                 }
                 return;
             }
