@@ -220,7 +220,6 @@ namespace UnitTests
             list.InsertAt(42, 0);
             Assert.AreEqual("[42]", list.ToString().Replace(" ", ""));
 
-            list = new LinkedList<int>();
             list.InsertAt(52, 1);
             Assert.AreEqual("[42,52]", list.ToString().Replace(" ", ""));
             Assert.AreEqual(52, list.Last);

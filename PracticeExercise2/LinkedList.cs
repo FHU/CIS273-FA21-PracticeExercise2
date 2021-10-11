@@ -114,7 +114,7 @@ namespace PracticeExercise2
             throw new NotImplementedException();
         }
 
-        public void InsertAt(T newValue, T index)
+        public void InsertAt(T newValue, int index)
         {
             throw new NotImplementedException();
         }

@@ -23,7 +23,7 @@ namespace PracticeExercise2
         void InsertAfter(T newValue, T existingValue);
 
         // TODO
-        void InsertAt(T newValue, T index);
+        void InsertAt(T newValue, int index);
 
         int FirstIndexOf(T existingValue);
 
