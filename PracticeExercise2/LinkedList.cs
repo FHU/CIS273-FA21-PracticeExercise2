@@ -32,13 +32,27 @@ namespace PracticeExercise2
             Tail = null;
         }
 
-        public int Length => throw new NotImplementedException();
+        public int Length
+        {
+            get
+            {
+                int count = 0;
+                var currentNode = Head;
+                while( currentNode != null )
+                {
+                    count++;
+                    currentNode = currentNode.Next;
+                }
+
+                return count;
+            }
+        }
 
         public bool IsEmpty => Head == null;
 
-        public T First => throw new NotImplementedException();
+        public T First => Head.Data;
 
-        public T Last => throw new NotImplementedException();
+        public T Last => Tail.Data;
 
         public void Append(T item)
         {
@@ -117,7 +131,7 @@ namespace PracticeExercise2
             {
                 return;
             }
-
+            
             // Remove head
             if (Head.Data.Equals(value))
             {
@@ -157,7 +171,6 @@ namespace PracticeExercise2
                 }
 
                 currentNode = currentNode.Next;
-
             }
 
         }
@@ -169,7 +182,18 @@ namespace PracticeExercise2
 
         public IList<T> Reverse()
         {
-            throw new NotImplementedException();
+            var result = new LinkedList<T>();
+
+            var currentNode = Head;
+            while ( currentNode != null)
+            {
+                //Prepend every single one of them
+                result.Prepend( currentNode.Data);
+
+                currentNode = currentNode.Next;
+            }
+            
+            return result;
         }
 
         public override string ToString()

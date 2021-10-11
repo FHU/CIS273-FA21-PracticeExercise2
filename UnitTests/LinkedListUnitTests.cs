@@ -200,7 +200,10 @@ namespace UnitTests
             Assert.AreEqual("[42,0,1,52,2,3,4]", list.ToString().Replace(" ", ""));
 
             list.InsertAt(62, list.Length - 1);
-            Assert.AreEqual("[42,0,1,52,2,3,4,62]", list.ToString().Replace(" ", ""));
+            Assert.AreEqual("[42,0,1,52,2,3,62,4]", list.ToString().Replace(" ", ""));
+
+            list.InsertAt(72, list.Length );
+            Assert.AreEqual("[42,0,1,52,2,3,62,4,72]", list.ToString().Replace(" ", ""));
 
 
             Assert.ThrowsException<IndexOutOfRangeException>(() =>
@@ -216,6 +219,11 @@ namespace UnitTests
             list = new LinkedList<int>();
             list.InsertAt(42, 0);
             Assert.AreEqual("[42]", list.ToString().Replace(" ", ""));
+
+            list = new LinkedList<int>();
+            list.InsertAt(52, 1);
+            Assert.AreEqual("[42,52]", list.ToString().Replace(" ", ""));
+            Assert.AreEqual(52, list.Last);
         }
 
         [TestMethod]
